@@ -1,0 +1,15 @@
+.card{
+   width: 80%;
+   margin: 4em auto;
+   border-radius: 7px;
+   box-shadow: -2px 5px 15px -6px #454545;
+   padding-bottom: 1em;
+}
+
+.image{
+   width: 100%;
+}
+
+.content {
+   margin: 1em;
+}

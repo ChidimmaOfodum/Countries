@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useMemo, useState } from "react";
 import CountryCard from "./CountryCard";
-import countryData from "../data/countryData";
+
 
 function AllCountries() {
+  const [data, setData] = useState([])
+
+  useMemo(() => {
+    fetch("https://restcountries.com/v3.1/all")
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  }, [])
   return (
     <div>
-      {countryData.map((item) => {
+      {data.map((item) => {
         return <CountryCard country={item} />;
       })}
     </div>

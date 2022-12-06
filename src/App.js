@@ -6,7 +6,7 @@ import Navigation from "./Components/Navigation";
 
 function App() {
  return (
-  <div>
+  <div className = "App">
     <Navigation />
     <AllCountries />
   </div>
