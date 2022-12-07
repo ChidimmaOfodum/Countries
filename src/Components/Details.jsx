@@ -1,6 +1,7 @@
 import React from 'react'
 
-function Details() {
+function Details({singleCountry}) {
+    let [country] = singleCountry
   return (
     <div>
         <button>Back</button>
@@ -9,7 +10,7 @@ function Details() {
         </div>
 
         <div>
-            <h3></h3>
+            <h3>{country.name.common}</h3>
             <p></p>
         </div>
     </div>
