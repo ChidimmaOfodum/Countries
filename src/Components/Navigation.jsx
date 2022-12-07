@@ -16,11 +16,15 @@ function Navigation(props) {
       props.setData(filtered);
       setRegionFilteredData(filtered);
      }
-     else props.setData(props.main)
+     else {
+      props.setData(props.main);
+      setRegionFilteredData([])
+     }
    }
 
   function handleSearch(event) {
-    let filtered = ((regionFilteredData) || (props.main)).filter((item) => {
+    let dataset = regionFilteredData.length === 0? props.main : regionFilteredData
+    let filtered = dataset.filter((item) => {
       return item.name.common.includes(event.target.value)
     });
     props.setData(filtered)
