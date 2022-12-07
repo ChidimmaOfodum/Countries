@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
 
-function Search() {
+function Search(props) {
+ 
   return (
     <div>
-      <input type= "search" placeholder='Search for a country...'/>
+      <input type="search" placeholder="Search for a country..."
+      onChange= {props.onChange} />
     </div>
-  )
+  );
 }
 
-export default Search
+export default Search;
