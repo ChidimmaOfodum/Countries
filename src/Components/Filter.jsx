@@ -1,9 +1,9 @@
 import React from 'react'
 
-function Filter() {
+function Filter(props) {
   return (
     <div>
-     <select>
+     <select onChange={props.onChange}>
         <option selected>Filter by Region</option>
         <option value= "Africa">Africa</option>
         <option value = "America">America</option>

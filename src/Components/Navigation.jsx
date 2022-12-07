@@ -3,11 +3,20 @@ import Search from "./Search";
 import Filter from "./Filter";
 
 function Navigation(props) {
+
   function handleSearch(event) {
-    console.log(event.target.value);
     let filtered = props.main.filter((item) => {
       return item.name.common.includes(event.target.value)
     });
+    props.setData(filtered)
+  }
+
+  function handleFilter(event) {
+    let index = event.target.selectedIndex;
+    let value = event.target[index].value
+    let filtered = props.main.filter((item) => {
+      return item.region === value
+    })
     props.setData(filtered)
   }
 
@@ -18,7 +27,7 @@ function Navigation(props) {
         <p>Dark mode</p>
       </div>
       <Search onChange={handleSearch} />
-      <Filter />
+      <Filter onChange = {handleFilter} />
     </div>
   );
 }
