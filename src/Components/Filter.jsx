@@ -4,7 +4,7 @@ function Filter(props) {
   return (
     <div>
      <select onChange={props.onChange}>
-        <option selected>Filter by Region</option>
+        <option defaultValue>Filter by Region</option>
         <option value= "Africa">Africa</option>
         <option value = "America">America</option>
         <option value = "Asia">Asia</option>
